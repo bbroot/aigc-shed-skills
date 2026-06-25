@@ -143,7 +143,26 @@ AI 倾向用引号标注术语。人类有时不加引号、有时用单引号�
 ```
 ❌ AI 式：实验结果表明，该方法在效率方面具有显著优势。
 ✅ 人类式：实验结果出来了——说实话，比预期要好。效率提升了 40%，这个数字我们自己一开始都不敢信。
-```
+
+### 7.6 对照 C1-C12 清除中文 AI 模式
+
+必杀7 的 A 部分（清除模式）需要对照 `references/zh-ai-patterns.md` 中的 C1-C12 逐项检查。
+
+**C1-C12 一句话速查**：
+- C1 过度意义 → 删大词，只留事实
+- C2 虚假深度 → 把「体现/彰显」改成具体原因
+- C3 数据注水 → 去掉「显著/大幅」，加具体数字
+- C4 否定排比 → 「不仅…更…」改直述
+- C5 三连排比 → 拆成单点叙述
+- C6 同义反复 → 固定用同一词，不来回换
+- C7 空洞结尾 → 改具体总结+不足
+- C8 模糊归因 → 加具体文献出处
+- C9 模板挑战 → 重构为个性化分析
+- C10 四字短语 → 每千字不超过 2 个
+- C11 句首模板 → 删掉模板句首直接说事
+- C12 连词链条 → 删除结构性连词，靠内容过渡
+
+完整 Before/After 示例见 `references/zh-ai-patterns.md` 第一部分。
 
 ---
 
@@ -205,4 +224,60 @@ AI 倾向用引号标注术语。人类有时不加引号、有时用单引号�
 ❌ AI 式（clean but suspicious）：The experiment was conducted over a period of three months. The results were analyzed using ANOVA. The findings indicate a statistically significant difference. The implications are discussed in the following section.
 ✅ 人类式（natural）：The experiment ran for three months — longer than we'd planned. Results were analyzed using ANOVA. The p-value: 0.02. Not groundbreaking, but worth discussing. Implications? See below. 
 // 加了缩略语 we'd / 长破折号 / 片段句 / 反问
-```
+
+### 8.4 对照 E1-E10 清除英文 AI 模式
+
+必杀7 的 C 部分（英文模式清除）需要对照 `references/zh-ai-patterns.md` 中的 E1-E10 逐项检查。
+
+**E1-E10 一句话速查**：
+- E1 Em dash 滥用 → 每段 ≤1 个，其余改逗号或句号
+- E2 "Not only…but also…" 过度 → 改直述句
+- E3 AI 高频词汇 → 替换（Additionally→Also, pivotal→key, underscore→show）
+- E4 模糊归因 → 给具体文献出处
+- E5 句首单一 → 多样化：时间状语/疑问句/条件句开头
+- E6 开头陈词滥调 → 重写开头，用具体问题或场景切入
+- E7 填充短语 → 直接删除
+- E8 过度限定 → 直接说结论
+- E9 假范围 "From X to Y" → 改为具体范围
+- E10 过度干净 → 注入缩略语/反问句/不完整句
+
+完整 Before/After 示例见 `references/zh-ai-patterns.md` 第二部分。
+
+---
+
+## 输出格式自查清单
+
+改写完成后，按此清单逐项检查：
+
+- [ ] 全文句长 CV > 0.5
+- [ ] 虚词密度 < 90/千字
+- [ ] 每 200 字有具体数据
+- [ ] 无 AI 高频词
+- [ ] 段落间风格有差异
+- [ ] 有个人声音和批判性
+- [ ] C1-C12 模式已清除（中文适用）
+- [ ] E1-E10 模式已清除（英文适用）
+- [ ] 进化数据已记录（写入 evolution-log.md）
+
+## 改动统计字段说明
+
+在输出格式的「改动统计」部分，需包含以下字段：
+
+- **句式重构**：X 处（必杀1+3）
+- **虚词删减**：X 处（必杀2）
+- **具体化注入**：X 处（必杀4）
+- **论证变化**：X 段（必杀5）
+- **个人声音**：X 处（必杀6+7）
+- **模式清除**：X 种（必杀7 的 A/C 部分）
+- **多模型接力**：是/否（必杀8）
+
+---
+
+## 参考资源
+
+- `references/zh-ai-patterns.md`：C1-C12 + E1-E10 完整模式清单（含 Before/After 示例）
+- `references/model-fingerprints.md`：各 AI 模型写作指纹
+- `references/detection-logic.md`：检测器原理与弱点
+- `references/bypass-arsenal.md`：逐检测器突破方案
+- `references/multi-model-pipeline.md`：多模型接力管线详解
+- `evolution/patterns.json`：进化引擎权重数据
