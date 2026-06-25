@@ -1,46 +1,76 @@
 {
-  "version": 1,
-  "last_updated": "",
+  "version": 2,
+  "last_updated": "2026-06-25",
   "technique_weights": {
     "sentence_length_randomization": {
       "weight": 30,
       "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "function_word_slimming": {
       "weight": 20,
       "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "sentence_restructuring": {
       "weight": 20,
       "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "concretization_bombing": {
       "weight": 15,
       "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "argument_path_diversification": {
       "weight": 10,
       "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "voice_injection": {
       "weight": 5,
       "min_strength": "moderate",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": ""
     },
     "style_rotation": {
       "weight": 0,
       "min_strength": "ultimate",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": "only for full-document level"
     },
     "multi_model_chain": {
       "weight": 0,
       "min_strength": "ultimate",
+      "success_rate": 0.0,
+      "usage_count": 0,
       "notes": "most expensive, highest impact"
+    },
+    "pattern_clearing": {
+      "weight": 25,
+      "min_strength": "deep",
+      "success_rate": 0.0,
+      "usage_count": 0,
+      "notes": "C1-C12/E1-E10 pattern removal"
+    },
+    "soul_injection": {
+      "weight": 15,
+      "min_strength": "moderate",
+      "success_rate": 0.0,
+      "usage_count": 0,
+      "notes": "attitude, rhythm, contradiction, tactile feel"
     }
   },
   "detector_specific_weights": {
@@ -49,34 +79,44 @@
       "function_word_slimming": 25,
       "concretization_bombing": 20,
       "voice_injection": 10,
-      "style_rotation": 10
+      "style_rotation": 10,
+      "pattern_clearing": 30,
+      "soul_injection": 15
     },
     "gptzero": {
       "argument_path_diversification": 30,
       "sentence_restructuring": 25,
       "concretization_bombing": 20,
       "sentence_length_randomization": 15,
-      "voice_injection": 10
+      "voice_injection": 10,
+      "pattern_clearing": 20,
+      "soul_injection": 20
     },
     "zerogpt": {
       "sentence_length_randomization": 50,
       "sentence_restructuring": 20,
       "concretization_bombing": 15,
-      "voice_injection": 15
+      "voice_injection": 15,
+      "pattern_clearing": 25,
+      "soul_injection": 10
     },
     "wanfang": {
       "function_word_slimming": 30,
       "sentence_length_randomization": 25,
       "concretization_bombing": 20,
       "sentence_restructuring": 15,
-      "argument_path_diversification": 10
+      "argument_path_diversification": 10,
+      "pattern_clearing": 20,
+      "soul_injection": 15
     },
     "weipu": {
       "argument_path_diversification": 30,
       "sentence_restructuring": 25,
       "voice_injection": 20,
       "function_word_slimming": 15,
-      "concretization_bombing": 10
+      "concretization_bombing": 10,
+      "pattern_clearing": 25,
+      "soul_injection": 20
     }
   },
   "success_correlations": [],
