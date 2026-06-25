@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "last_updated": "",
+  "technique_weights": {
+    "sentence_length_randomization": {
+      "weight": 30,
+      "min_strength": "deep",
+      "notes": ""
+    },
+    "function_word_slimming": {
+      "weight": 20,
+      "min_strength": "deep",
+      "notes": ""
+    },
+    "sentence_restructuring": {
+      "weight": 20,
+      "min_strength": "deep",
+      "notes": ""
+    },
+    "concretization_bombing": {
+      "weight": 15,
+      "min_strength": "deep",
+      "notes": ""
+    },
+    "argument_path_diversification": {
+      "weight": 10,
+      "min_strength": "deep",
+      "notes": ""
+    },
+    "voice_injection": {
+      "weight": 5,
+      "min_strength": "moderate",
+      "notes": ""
+    },
+    "style_rotation": {
+      "weight": 0,
+      "min_strength": "ultimate",
+      "notes": "only for full-document level"
+    },
+    "multi_model_chain": {
+      "weight": 0,
+      "min_strength": "ultimate",
+      "notes": "most expensive, highest impact"
+    }
+  },
+  "detector_specific_weights": {
+    "cnki": {
+      "sentence_length_randomization": 35,
+      "function_word_slimming": 25,
+      "concretization_bombing": 20,
+      "voice_injection": 10,
+      "style_rotation": 10
+    },
+    "gptzero": {
+      "argument_path_diversification": 30,
+      "sentence_restructuring": 25,
+      "concretization_bombing": 20,
+      "sentence_length_randomization": 15,
+      "voice_injection": 10
+    },
+    "zerogpt": {
+      "sentence_length_randomization": 50,
+      "sentence_restructuring": 20,
+      "concretization_bombing": 15,
+      "voice_injection": 15
+    },
+    "wanfang": {
+      "function_word_slimming": 30,
+      "sentence_length_randomization": 25,
+      "concretization_bombing": 20,
+      "sentence_restructuring": 15,
+      "argument_path_diversification": 10
+    },
+    "weipu": {
+      "argument_path_diversification": 30,
+      "sentence_restructuring": 25,
+      "voice_injection": 20,
+      "function_word_slimming": 15,
+      "concretization_bombing": 10
+    }
+  },
+  "success_correlations": [],
+  "failure_analysis": []
+}
