@@ -361,12 +361,6 @@ cd aigc-shed-skills
 
 ---
 
-## 📬 联系与反馈
-
-- 🐛 **Bug 反馈**：[GitHub Issues](https://github.com/bbroot/aigc-shed-skills/issues)
-- 💬 **讨论区**：[GitHub Discussions](https://github.com/bbroot/aigc-shed-skills/discussions)
-- 📧 **邮件联系**：[your-email@example.com](mailto:your-email@example.com)
-- 💬 **Telegram 群组**：[加入讨论](https://t.me/aigc_shed)
 
 ---
 
