@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "schema_version": 2,
   "last_updated": "2026-06-25",
   "technique_weights": {
     "sentence_length_randomization": {

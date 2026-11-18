@@ -22,6 +22,8 @@
 
 ---
 
+> 📖 **多平台安装**（WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy）见 [INSTALL.md](INSTALL.md)
+
 <h1 align="center">🦞 AIGC-Shed (龙虾脱壳)</h1>
 <h3 align="center">论文 AIGC 降重终极武器 — 从 80%→15%，极限模式 <10%</h3>
 
@@ -60,7 +62,7 @@
 skillhub_install aigc-shed
 
 # 📦 方式二：GitHub 手动安装
-git clone https://github.com/bbroot/aigc-shed-skills.git ~/.qclaw/skills/aigc-shed
+git clone https://github.com/bbroot/aigc-shed-skills.git ~/.workbuddy/skills/aigc-shed
 
 # 🔧 方式三：直接导入（Coze/Dify/任何 AI 平台）
 # 将 SKILL.md 作为系统提示词，references/ 作为知识库

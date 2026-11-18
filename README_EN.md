@@ -22,6 +22,8 @@
 
 ---
 
+> 📖 **多平台安装**（WorkBuddy / 豆包工作 / Claude Code / Cursor / CodeBuddy）见 [INSTALL.md](INSTALL.md)
+
 <h1 align="center">🦞 AIGC-Shed (Dragon Shrimp Deshelling)</h1>
 <h3 align="center">The Ultimate AIGC De-checker — From 80%→15%, Extreme Mode <10%</h3>
 
@@ -60,7 +62,7 @@
 skillhub_install aigc-shed
 
 # 📦 Method 2: Manual GitHub install
-git clone https://github.com/bbroot/aigc-shed-skills.git ~/.qclaw/skills/aigc-shed
+git clone https://github.com/bbroot/aigc-shed-skills.git ~/.workbuddy/skills/aigc-shed
 
 # 🔧 Method 3: Direct import (Coze/Dify/Any AI Platform)
 # Import SKILL.md as system prompt, references/ as knowledge base
