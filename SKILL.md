@@ -248,14 +248,22 @@ CV>0.5，不能连续3句长度相近。最长句拆2-3句，中间插超短句�
      - `usage_count` + 1
      - 如果成功：`success_rate = (success_rate * (usage_count-1) + 1) / usage_count`
      - 如果失败：`success_rate = (success_rate * (usage_count-1)) / usage_count`
-   - 根据新的 `success_rate` 调整 `weight`：
-     - `success_rate` > 0.7 → `weight` + 5（上限100）
-     - `success_rate` < 0.3 → `weight` - 5（下限0）
+   - 根据新的 `success_rate` **重算**（非累加）`weight`，避免"成功率相同却因使用次数不同权重悬殊"：
+     - `weight = clamp(round(50 + (success_rate - 0.5) * 100), 0, 100)`
+       - 例：success_rate=0.8 → weight=80；=0.5 → 50；=0.2 → 20
+     - 这样权重始终是成功率的函数，不会随使用次数无限累加到 100 或归零
+   - **同步专项权重**：若本次有明确检测器，同时更新 `detector_specific_weights.<检测器>` 中该技法的成功率/权重（因阶段零优先使用专项权重，只更通用权重会导致专项表永远静止）
    - 更新 `last_updated` 为当前日期
 
-4. **每积累 5 条记录**，分析趋势：
-   - 成功案例高频技法 → 提高其 `weight`
-   - 失败案例高频技法 → 降低其 `weight`
+4. **每积累 5 条记录**，分析趋势（**唯一**的批量调整入口，不再与逐次调整叠加）：
+   - 把这 5 条的成功/失败模式汇总写入 `patterns.json` 的 `success_correlations` / `failure_analysis`（见下）
+   - 若某技法连续失败，直接将其 `weight` 按上述公式按当前 success_rate 重算，而不是再次 ±5
+
+`success_correlations` / `failure_analysis` 写入结构（数组元素）：
+```
+{"pattern": "检测器/场景特征", "technique": "有效或失效的技法", "count": 累计次数, "last_seen": "YYYY-MM-DD"}
+```
+每次趋势分析后追加或累加 count，供阶段零"分析趋势，调整策略"读取。
 
 如果用户**未提供**改写后 AIGC 率，在输出中**强烈提醒**用户检测并反馈，这是技能进化的关键数据！
 
